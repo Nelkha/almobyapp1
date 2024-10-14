@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './Components/Header/Header'
 import Slider from './Components/Slider/Slider'
+import Nosotros from './Components/Nosotros/Nosotros'
 
 function App() {
  
@@ -12,6 +13,7 @@ function App() {
     <>
       <Header/>
       <Slider />
+      <Nosotros subtitulo="Nosotros"/>
     </>
   )
 }

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const HeaderWrapper = styled.header`
   display: grid;
-  width: 100%;
+  
   grid-template-columns: 1fr auto; 
   align-items: center;
   align-content: center;
@@ -30,16 +30,16 @@ const Logo = styled.div`
 
 const LogoImage = styled.img`
   position: relative;
- background: ${props => props.bgColor || 'transparent'};
+ background: ${props => props.$bgColor || 'transparent'};
   height: 95px; 
   width: auto; 
   border-radius: 50%; 
-  bottom: ${props => props.bottomPos || 0};
+  bottom: ${props => props.$bottomPos || 0};
 
 `;
 
 
-const CompanyName = styled.h1`
+const CompanyName = styled.h2`
   font-size: 24px;
   margin: 0;
 `;
@@ -69,7 +69,7 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <Logo>
-        <LogoImage bottomPos="-15%" bgColor="#873636" src='/images/logo.png'/>
+        <LogoImage $bottomPos="-15%" $bgColor="#873636" src='/images/logo.png'/>
         
         <CompanyName>Nombre Cabania</CompanyName>
       </Logo>
