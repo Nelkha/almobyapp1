@@ -4,8 +4,8 @@ import { Logo,LogoImage,CompanyName } from '../Header/Header';
 
 const SliderWrapper = styled.section`
   display: grid;
-  width: 100%;
   grid-template-columns: 1fr auto; 
+  width: 100%; 
   align-items: center;
   align-content: center;
   background-image: url(images/slider.jpeg);
@@ -14,6 +14,7 @@ const SliderWrapper = styled.section`
   background-position: center; 
   min-height: 972px;
   position: relative; 
+  margin: 0; 
 `;
 
 const Flap = styled.div`
@@ -21,7 +22,6 @@ const Flap = styled.div`
   grid-template-columns: repeat(3, 1fr); 
   gap: 20px; 
   width: 100%; 
-  
   background: #873636; 
   height: 100px;
   position: absolute; 
@@ -43,9 +43,9 @@ const FlapItem = styled.div`
   position: relative; 
 
 
- /* Pseudo-elemento para el rectángulo verde */
+ 
  &::before {
-    content: ''; /* Necesario para mostrar el pseudo-elemento */
+    content: ''; 
     position: absolute; 
     bottom: 99%; 
     left: 0; 
@@ -53,13 +53,16 @@ const FlapItem = styled.div`
     height: 70px; 
     background-color: #873636;
     z-index: 2; 
-    clip-path: path('M0 100 C 40 0, 60 0, 100 100 L 0 100 Z')
-  
+    
+    
   }
+  
+  
 
   /* Solo muestra el pseudo-elemento en el primer y tercer FlapItem */
   &:nth-child(1)::before { 
     display: block; 
+    clip-path: polygon(0 100%, 0 0%, 50% 0%, 100% 100%, 100% 100%); 
   }
 
   &:nth-child(2)::before { 
@@ -68,6 +71,8 @@ const FlapItem = styled.div`
 
   &:nth-child(3)::before {
     display: block; 
+    clip-path: polygon(0 100%, 100% 100%, 100% 0%, 50% 0%);
+    
   }
 `;
 

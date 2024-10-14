@@ -11,9 +11,10 @@ const HeaderWrapper = styled.header`
   align-content: center;
   padding: 20px;
   background-color: #873636;
-  height: 50px;
+  height: 85px;
   color: white;
   position: relative;
+  z-index: 1;
 `;
 
 const Logo = styled.div`
@@ -29,14 +30,12 @@ const Logo = styled.div`
 
 const LogoImage = styled.img`
   position: relative;
-  background:#873636 ;
+ background: ${props => props.bgColor || 'transparent'};
   height: 95px; 
   width: auto; 
   border-radius: 50%; 
-  bottom: -15%;
-  
-  
- 
+  bottom: ${props => props.bottomPos || 0};
+
 `;
 
 
@@ -70,7 +69,7 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <Logo>
-        <LogoImage src='/images/logo.png'/>
+        <LogoImage bottomPos="-15%" bgColor="#873636" src='/images/logo.png'/>
         
         <CompanyName>Nombre Cabania</CompanyName>
       </Logo>
