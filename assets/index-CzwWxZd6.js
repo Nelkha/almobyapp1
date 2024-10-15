@@ -94,7 +94,7 @@ Error generating stack: `+s.message+`
   width: 100%; 
   align-items: center;
   align-content: center;
-  background-image: url(${t=>`/almobyapp1/${t.$backgroundImage}`});
+  background-image: url(${t=>"/almobyapp1/images/slider.jpeg"});
   background-repeat: no-repeat;
   background-size: cover; 
   background-position: center; 
