@@ -5,8 +5,7 @@ import { db } from '../../Utils/Firebase';
 import Tag from "../Elementos/Tag";
 
 const EquipoContainer = styled.section`
-  display: grid;
- 
+  display: grid; 
   grid-template-columns: repeat(20, 1fr);
   grid-auto-rows: auto; 
   grid-column-start: 1;
@@ -21,6 +20,8 @@ const EquipoWrapper = styled.div`
   grid-template-columns: repeat(5, 1fr);
   grid-auto-rows: auto; 
   grid-column-start: 4;
+  margin-bottom: 130px;
+  margin-top: 20px;
   gap: 20px; 
 `;
 
@@ -28,6 +29,8 @@ const EmpleadoCard = styled.div`
     height: 150px;
     background-color: #f0f0f0; 
     padding: 20px; 
+    margin-right:20px;
+    
     border-radius: 4px 40px 4px 4px; 
     background-image: url(${(props) => props.$backgroundImage});
     background-position: center;
@@ -40,11 +43,19 @@ const EmpleadoCard = styled.div`
     justify-content: flex-end; 
     color: #fff; 
     box-shadow: 0px 1.85px 3.15px 0px #00000007;
-    box-shadow: 0px 8.15px 6.52px 0px #0000000C;
-    box-shadow: 0px 20px 13px 0px #0000000F;
-    box-shadow: 0px 38.52px 25.48px 0px #00000013;
-    box-shadow: 0px 64.81px 46.85px 0px #00000017;
-    box-shadow: 0px 100px 80px 0px #0000001F;   
+
+box-shadow: 0px 8.15px 6.52px 0px #0000000C;
+
+box-shadow: 0px 20px 13px 0px #0000000F;
+
+box-shadow: 0px 38.52px 25.48px 0px #00000013;
+
+box-shadow: 0px 64.81px 46.85px 0px #00000017;
+
+box-shadow: 0px 100px 80px 0px #0000001F;
+  
+
+    
 `;
 
 const EmpleadoInfo = styled.div`

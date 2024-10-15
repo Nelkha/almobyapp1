@@ -1,11 +1,8 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './Components/Header/Header'
-import Slider from './Components/Slider/Slider'
-import Nosotros from './Components/Nosotros/Nosotros'
-import Equipo from './Components/Equipo/Equipo'
+import Home from './Components/Home/Home'
+import Footer from './Components/Footer/Footer'
+import Copyright from './Components/Elementos/Copyright'
 
 function App() {
  
@@ -13,9 +10,9 @@ function App() {
   return (
     <>
       <Header/>
-      <Slider />
-      <Nosotros />
-      <Equipo/>
+      <Home/>
+      <Footer/>
+      <Copyright/>
       </>
   )
 }

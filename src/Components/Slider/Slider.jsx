@@ -8,7 +8,7 @@ const SliderWrapper = styled.section`
   width: 100%; 
   align-items: center;
   align-content: center;
-  background-image: url(${(props) => `${import.meta.env.BASE_URL}${props.$backgroundImage}`});
+  background-image: url(${(props) => `${import.meta.env.BASE_URL}images/slider.jpeg`});
   background-repeat: no-repeat;
   background-size: cover; 
   background-position: center; 
