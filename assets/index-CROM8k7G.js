@@ -115,13 +115,13 @@ Error generating stack: `+o.message+`
   a:hover {
     text-decoration: underline;
   }
-`,LS=()=>j.jsxs(VS,{children:[j.jsxs(m0,{children:[j.jsx(g0,{$bottomPos:"-15%",$bgColor:"#873636",src:"/images/logo.png"}),j.jsx(y0,{children:"Nombre Cabania"})]}),j.jsx(OS,{children:j.jsxs("ul",{children:[j.jsx("li",{children:j.jsx(um,{to:"/",children:"Home"})}),j.jsx("li",{children:j.jsx(um,{to:"/genetica",children:"Genetica"})}),j.jsx("li",{children:j.jsx("a",{href:"#Remates",children:"Remates"})}),j.jsx("li",{children:j.jsx("a",{href:"#sobre-nosotros",children:"Sobre Nosotros"})}),j.jsx("li",{children:j.jsx("a",{href:"#contacto",children:"Contacto"})})]})})]}),MS=ce.section`
+`,LS=()=>j.jsxs(VS,{children:[j.jsxs(m0,{children:[j.jsx(g0,{$bottomPos:"-15%",$bgColor:"#873636",src:"/almobyapp1/images/logo.png"}),j.jsx(y0,{children:"Nombre Cabania"})]}),j.jsx(OS,{children:j.jsxs("ul",{children:[j.jsx("li",{children:j.jsx(um,{to:"/",children:"Home"})}),j.jsx("li",{children:j.jsx(um,{to:"/genetica",children:"Genetica"})}),j.jsx("li",{children:j.jsx("a",{href:"#Remates",children:"Remates"})}),j.jsx("li",{children:j.jsx("a",{href:"#sobre-nosotros",children:"Sobre Nosotros"})}),j.jsx("li",{children:j.jsx("a",{href:"#contacto",children:"Contacto"})})]})})]}),MS=ce.section`
   display: grid;
   grid-template-columns: 1fr auto; 
   width: 100%; 
   align-items: center;
   align-content: center;
-  background-image: url(${t=>"/images/slider.jpeg"});
+  background-image: url(${t=>"/almobyapp1/images/slider.jpeg"});
   background-repeat: no-repeat;
   background-size: cover; 
   background-position: center; 
@@ -183,7 +183,7 @@ Error generating stack: `+o.message+`
     clip-path: polygon(0 100%, 100% 100%, 100% 0%, 50% 0%);
     
   }
-`,jS=()=>j.jsx(MS,{children:j.jsxs(FS,{children:[j.jsx(Bu,{children:j.jsx("h2",{children:"Slider 1"})}),j.jsx(Bu,{children:j.jsxs(m0,{children:[j.jsx(g0,{src:"/images/logo.png"}),j.jsx(y0,{children:"Nombre Cabania"})]})}),j.jsx(Bu,{children:j.jsx("h2",{children:"Slider 3"})})]})}),$S=ce.h3`
+`,jS=()=>j.jsx(MS,{children:j.jsxs(FS,{children:[j.jsx(Bu,{children:j.jsx("h2",{children:"Slider 1"})}),j.jsx(Bu,{children:j.jsxs(m0,{children:[j.jsx(g0,{src:"/almobyapp1/images/logo.png"}),j.jsx(y0,{children:"Nombre Cabania"})]})}),j.jsx(Bu,{children:j.jsx("h2",{children:"Slider 3"})})]})}),$S=ce.h3`
   width: 270px;
   height: 72px;
   padding:10px;
@@ -217,7 +217,7 @@ Error generating stack: `+o.message+`
 `,BS=ce.div`
   width: 100%;
   height: 360px;
-  background-image: url(${t=>`/${t.$image}`}); 
+  background-image: url(${t=>`/almobyapp1/${t.$image}`}); 
   background-size: cover;
  
 `,bS=ce.h3`
@@ -2190,7 +2190,7 @@ align-items: center;
   align-items: center;
   `,FP=ce.img`
   width: 176px;
-`,jP=()=>j.jsx(j.Fragment,{children:j.jsx(LP,{children:j.jsxs(MP,{children:["© Todos los derechos reservados. Developed by",j.jsx(FP,{src:"/images/copyright.png"})]})})}),$P=ce.section`
+`,jP=()=>j.jsx(j.Fragment,{children:j.jsx(LP,{children:j.jsxs(MP,{children:["© Todos los derechos reservados. Developed by",j.jsx(FP,{src:"/almobyapp1/images/copyright.png"})]})})}),$P=ce.section`
   display: grid;
   grid-template-columns: repeat(20, 1fr);
   grid-auto-rows: auto; 
