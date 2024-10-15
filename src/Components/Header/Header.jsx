@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 
@@ -75,8 +76,8 @@ const Header = () => {
       </Logo>
       <Nav>
         <ul>
-          <li><a href="#home">Inicio</a></li>
-          <li><a href="#genetica">Genetica</a></li>
+          <li><Link to="almobyapp1/">Home</Link></li>
+          <li><Link to="almobyapp1/genetica">Genetica</Link></li>
           <li><a href="#Remates">Remates</a></li>
           <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
           <li><a href="#contacto">Contacto</a></li>

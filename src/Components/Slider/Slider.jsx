@@ -59,7 +59,7 @@ const FlapItem = styled.div`
   
   
 
-  /* Solo muestra el pseudo-elemento en el primer y tercer FlapItem */
+ 
   &:nth-child(1)::before { 
     display: block; 
     clip-path: polygon(0 100%, 0 0%, 50% 0%, 100% 100%, 100% 100%); 
