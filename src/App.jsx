@@ -5,6 +5,7 @@ import './App.css'
 import Header from './Components/Header/Header'
 import Slider from './Components/Slider/Slider'
 import Nosotros from './Components/Nosotros/Nosotros'
+import Equipo from './Components/Equipo/Equipo'
 
 function App() {
  
@@ -13,8 +14,9 @@ function App() {
     <>
       <Header/>
       <Slider />
-      <Nosotros subtitulo="Nosotros"/>
-    </>
+      <Nosotros />
+      <Equipo/>
+      </>
   )
 }
 
