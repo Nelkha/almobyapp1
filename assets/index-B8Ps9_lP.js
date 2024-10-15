@@ -94,7 +94,7 @@ Error generating stack: `+o.message+`
   width: 100%; 
   align-items: center;
   align-content: center;
-  background-image: url(/images/slider.jpeg);
+  background-image: url(${e=>"/images/slider.jpeg"});
   background-repeat: no-repeat;
   background-size: cover; 
   background-position: center; 
@@ -190,7 +190,7 @@ Error generating stack: `+o.message+`
 `,Hm=q.div`
   width: 100%;
   height: 360px;
-  background-image: url(${e=>e.$image}); 
+  background-image: url(${e=>`/${e.$image}`}); 
   background-size: cover;
  
 `,Qm=q.h3`
@@ -210,7 +210,7 @@ flex-direction: column;
 max-width: 500px;
 margin-top: 5px;
 line-height: 36px;
-`,Gm=()=>z.jsxs(Wm,{children:[z.jsx(Hm,{$image:"/images/angus.jpeg"}),z.jsxs(Ym,{children:[z.jsx(Qm,{children:"Sed ut"}),z.jsx(Km,{children:"Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et."})]})]}),Xm=q.section`
+`,Gm=()=>z.jsxs(Wm,{children:[z.jsx(Hm,{$image:"images/angus.jpeg"}),z.jsxs(Ym,{children:[z.jsx(Qm,{children:"Sed ut"}),z.jsx(Km,{children:"Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et."})]})]}),Xm=q.section`
   display: grid;
   grid-template-columns: repeat(20, 1fr);
   grid-auto-rows: auto; 
