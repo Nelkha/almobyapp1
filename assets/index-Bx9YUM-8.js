@@ -156,7 +156,7 @@ Error generating stack: `+o.message+`
     clip-path: polygon(0 100%, 100% 100%, 100% 0%, 50% 0%);
     
   }
-`,Am=()=>z.jsx(Mm,{children:z.jsxs(Fm,{children:[z.jsx(Xo,{children:z.jsx("h2",{children:"Slider 1"})}),z.jsx(Xo,{children:z.jsxs(nd,{children:[z.jsx(rd,{src:"/images/logo.png"}),z.jsx(ld,{children:"Nombre Cabania"})]})}),z.jsx(Xo,{children:z.jsx("h2",{children:"Slider 3"})})]})}),Um=q.h3`
+`,Am=()=>z.jsx(Mm,{children:z.jsxs(Fm,{children:[z.jsx(Xo,{children:z.jsx("h2",{children:"Slider 1"})}),z.jsx(Xo,{children:z.jsxs(nd,{children:[z.jsx(rd,{src:"images/logo.png"}),z.jsx(ld,{children:"Nombre Cabania"})]})}),z.jsx(Xo,{children:z.jsx("h2",{children:"Slider 3"})})]})}),Um=q.h3`
   width: 270px;
   height: 72px;
   padding:10px;
