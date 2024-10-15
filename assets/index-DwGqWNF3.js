@@ -94,7 +94,7 @@ Error generating stack: `+o.message+`
   width: 100%; 
   align-items: center;
   align-content: center;
-  background-image: url(images/slider.jpeg);
+  background-image: url(/images/slider.jpeg);
   background-repeat: no-repeat;
   background-size: cover; 
   background-position: center; 
@@ -190,7 +190,7 @@ Error generating stack: `+o.message+`
 `,Hm=q.div`
   width: 100%;
   height: 360px;
-  background-image: url(${e=>e.$image}); /* Cambiado a $image */
+  background-image: url(${e=>e.$image}); 
   background-size: cover;
  
 `,Qm=q.h3`
