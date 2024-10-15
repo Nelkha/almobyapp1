@@ -69,7 +69,7 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <Logo>
-        <LogoImage $bottomPos="-15%" $bgColor="#873636" src='/images/logo.png'/>
+        <LogoImage $bottomPos="-15%" $bgColor="#873636" src={`${import.meta.env.BASE_URL}images/logo.png`}  />
         
         <CompanyName>Nombre Cabania</CompanyName>
       </Logo>

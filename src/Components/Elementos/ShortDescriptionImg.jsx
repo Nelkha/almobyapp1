@@ -16,7 +16,7 @@ const ShortDescriptionImgContainer = styled.div`
 const ShortDescriptionImgWrapper = styled.div`
   width: 100%;
   height: 360px;
-  background-image: url(${(props) => props.$image}); /* Cambiado a $image */
+  background-image: url(${(props) => `${import.meta.env.BASE_URL}${props.$image}`}); 
   background-size: cover;
  
 `;
@@ -43,7 +43,7 @@ line-height: 36px;
 const ShortDescriptionImg = () => {
     return (
         <ShortDescriptionImgContainer>
-            <ShortDescriptionImgWrapper $image={"/images/angus.jpeg"} />
+            <ShortDescriptionImgWrapper $image={"images/angus.jpeg"} />
             <ShortDescriptionImgContent>
                 <ShortDescriptionImgTittle>Sed ut</ShortDescriptionImgTittle>
                 <ShortDescriptionImgParagraph>Perspiciatis unde omnis iste natus

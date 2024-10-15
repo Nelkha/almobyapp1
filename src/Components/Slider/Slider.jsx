@@ -8,7 +8,7 @@ const SliderWrapper = styled.section`
   width: 100%; 
   align-items: center;
   align-content: center;
-  background-image: url(images/slider.jpeg);
+  background-image: url(${(props) => `${import.meta.env.BASE_URL}images/slider.jpeg`});
   background-repeat: no-repeat;
   background-size: cover; 
   background-position: center; 
@@ -85,7 +85,7 @@ const Slider = () => {
         </FlapItem>
         <FlapItem>
         <Logo>
-        <LogoImage src='/images/logo.png'/>
+        <LogoImage src={`${import.meta.env.BASE_URL}images/logo.png`}/>
         
         <CompanyName>Nombre Cabania</CompanyName>
       </Logo>
