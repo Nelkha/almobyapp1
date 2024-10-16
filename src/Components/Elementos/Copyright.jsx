@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 const CopyrightContainer=styled.div`
 background-color: white;
 display: grid;
@@ -29,6 +30,7 @@ return(
     <CopyrightText>
         © Todos los derechos reservados. Developed by
         <CopyrightImg src={`${import.meta.env.BASE_URL}images/copyright.png`}  />
+       
       </CopyrightText>
       </CopyrightContainer>
     </>

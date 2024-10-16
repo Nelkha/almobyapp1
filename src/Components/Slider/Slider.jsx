@@ -1,10 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Logo,LogoImage,CompanyName } from '../Header/Header';
+import { Subtitulo } from '../Elementos/Titulo';
+import { CenterCol, LeftCol, RightCol } from '../Elementos/Wrappers';
+import BottonLargo from '../Elementos/BottonLargo';
+import { FaWhatsapp } from "react-icons/fa";
+import { MdOutlineMailOutline } from "react-icons/md";
+import { FaLocationDot } from "react-icons/fa6";
+
+
 
 const SliderWrapper = styled.section`
   display: grid;
-  grid-template-columns: 1fr auto; 
+  grid-template-columns: repeat(20,1fr); 
   width: 100%; 
   align-items: center;
   align-content: center;
@@ -22,8 +30,9 @@ const Flap = styled.div`
   grid-template-columns: repeat(3, 1fr); 
   gap: 20px; 
   width: 100%; 
+ 
   background: #873636; 
-  height: 100px;
+  height: 160px;
   position: absolute; 
   bottom: 0; 
   left: 0; 
@@ -41,7 +50,7 @@ const FlapItem = styled.div`
   height: 100%; 
   color: white; 
   position: relative; 
-
+  
 
  
  &::before {
@@ -75,23 +84,70 @@ const FlapItem = styled.div`
     
   }
 `;
+const Quote=styled.p`
+font-size: 1.5rem;
+color: white;
+border-left: 4px solid white;
+background: transparent;
+max-width: 265px;
+padding-left: 20px;
+position: absolute;
+left: 50px;
+top:-5px;
+text-align: center;
+`
 
+const BotonCentral = styled.button`
+width: 382px;
+height: 60px;
+font-weight: 300;
+border: #873636 3px solid;
+cursor: pointer;
+color: white;
+font-size: 1.5rem;
+align-self: center;
+background-color: transparent;
+border-radius: 45px;
+
+`
+const ContainerCentral = styled.div`
+width: 100%;
+text-align: center;
+grid-column:1/20;
+
+`
 const Slider = () => {
   return (
     <SliderWrapper>
+     <ContainerCentral>
+     <BotonCentral>1er Remate Anual</BotonCentral>
+      </ContainerCentral>
       <Flap>
         <FlapItem>
-          <h2>Slider 1</h2>
+        <Quote>
+
+          
+       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor”
+        </Quote>
         </FlapItem>
         <FlapItem>
         <Logo>
         <LogoImage src={`${import.meta.env.BASE_URL}images/logo.png`}/>
-        
+        <CenterCol>
         <CompanyName>Nombre Cabania</CompanyName>
+        <Subtitulo  >Genética Superior</Subtitulo>
+        </CenterCol>
+      
       </Logo>
         </FlapItem>
         <FlapItem>
-          <h2>Slider 3</h2>
+        <RightCol $top="-20px"> 
+          <BottonLargo colorborde="white" color="white" icono={FaWhatsapp} texto="11912345678" />
+          <BottonLargo colorborde="white" color="white" icono={MdOutlineMailOutline} texto="hola@gmail.com" />
+          <BottonLargo colorborde="white" color="white" icono={FaLocationDot} texto="Corrientes, arg" />
+       
+          
+          </RightCol>
         </FlapItem>
       </Flap>
     </SliderWrapper>

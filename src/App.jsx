@@ -7,6 +7,8 @@ import Genetica from './Components/Genetica/Genetica';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
+
+
 function AnimatedRoutes() {
   const location = useLocation(); 
 
@@ -31,6 +33,7 @@ function App() {
     <Router>
       <Header />
       <AnimatedRoutes /> 
+      
       <Footer />
       <Copyright />
     </Router>

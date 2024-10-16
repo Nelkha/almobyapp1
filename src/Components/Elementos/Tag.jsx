@@ -4,9 +4,9 @@ const TagTittle = styled.h3`
   width: 270px;
   height: 72px;
   padding:10px;
-  font-size:3rem ;
+  font-size:${(props)=>props.$fontsize || '3rem'} ;
   text-align: center;
-  border-left: 4px solid white;
+  border-left: ${props=>props.$borderthickness || "4px"} solid white;
   color: white;
   `;
 const TagContainer = styled.div`
@@ -15,18 +15,17 @@ const TagContainer = styled.div`
   height: 142px;
   padding-left: 50px;
   grid-column: 1/span 5;
-
   align-items: center;
   background:#873636;
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
   `
 
-const Tag = (Props) => {
+const Tag = ({ $fontsize, subtitulo }) => {
   return (
     <>
       <TagContainer>
-        <TagTittle >{Props.subtitulo}</TagTittle>
+        <TagTittle $fontsize={$fontsize} >{subtitulo}</TagTittle>
       </TagContainer>
 
     </>
