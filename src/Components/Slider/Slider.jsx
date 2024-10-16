@@ -113,7 +113,7 @@ border-radius: 45px;
 const ContainerCentral = styled.div`
 width: 100%;
 text-align: center;
-grid-column:1/20;
+grid-column:1/span 20;
 
 `
 const Slider = () => {

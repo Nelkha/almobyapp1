@@ -6,11 +6,20 @@ import Copyright from './Components/Elementos/Copyright';
 import Genetica from './Components/Genetica/Genetica';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { subirVacas } from './Utils/Vacas';
+import React, { useEffect } from 'react';
 
 
 
 function AnimatedRoutes() {
   const location = useLocation(); 
+  useEffect(() => {
+    const uploadVacas = async () => {
+        await subirVacas();
+    };
+
+    uploadVacas(); 
+}, []); 
 
   return (
     <TransitionGroup>
