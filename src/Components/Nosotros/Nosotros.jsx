@@ -55,7 +55,7 @@ const NosotrosText = styled.p`
 `;
 const Nosotros = () => {
     return (<>
-        <NosotrosWrapper>
+        <NosotrosWrapper id="sobre-nosotros">
             <Tag subtitulo="Nosotros" />
             <NosotrosTitle>Nombre Cabania</NosotrosTitle>
             <NosotrosText>Sed ut perspiciatis unde omnis iste

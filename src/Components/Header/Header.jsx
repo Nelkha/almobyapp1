@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 
@@ -67,20 +67,51 @@ const Nav = styled.nav`
 `;
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const handleScrollToSection = (sectionId) => {
+    navigate('/almobyapp1/');
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
   return (
     <HeaderWrapper>
       <Logo>
-        <LogoImage $bottomPos="-15%" $bgColor="#873636" src={`${import.meta.env.BASE_URL}images/logo.png`}  />
-        
+        <LogoImage $bottomPos="-15%" $bgColor="#873636" src={`${import.meta.env.BASE_URL}images/logo.png`} />
         <CompanyName>Nombre Cabania</CompanyName>
       </Logo>
       <Nav>
         <ul>
-          <li><Link to="almobyapp1/">Home</Link></li>
-          <li><Link to="almobyapp1/genetica">Genetica</Link></li>
-          <li><a href="#Remates">Remates</a></li>
-          <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><Link to="/almobyapp1/">Home</Link></li>
+          <li><Link to="/almobyapp1/genetica">Genetica</Link></li>
+          
+          <li>
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                handleScrollToSection('sobre-nosotros');
+              }}
+              href="#sobre-nosotros"
+            >
+              Sobre Nosotros
+            </a>
+          </li>
+          <li>
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                handleScrollToSection('contacto');
+              }}
+              href="#contacto"
+            >
+              Contacto
+            </a>
+          </li>
         </ul>
       </Nav>
     </HeaderWrapper>
@@ -88,4 +119,4 @@ const Header = () => {
 };
 
 export default Header;
-export { Logo,CompanyName,LogoImage};
+export { Logo, CompanyName, LogoImage };

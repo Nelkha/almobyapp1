@@ -25,7 +25,7 @@ const FooterWrapper = styled.div`
 
 const Footer=() => {
 return(<>
-<FooterContainer>
+<FooterContainer id="contacto">
    <FooterWrapper>
    <LeftCol>
     <BottonLargo colorborde="transparent" color="white" icono={BsFillTelephoneFill} texto="+012 345 6789"/>

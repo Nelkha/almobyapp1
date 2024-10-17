@@ -6,6 +6,7 @@ import Breadcrumbs from '../Elementos/Breadcrumbs';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../Utils/Firebase';
 import { FaChevronRight } from "react-icons/fa6";
+import { useNavigate } from 'react-router-dom';
 
 
 //Contenedores
@@ -48,7 +49,7 @@ const GeneticaScrollableWrapper = styled.div`
     background: #555; 
   }
 `;
-const GeneticaVacaCard=styled.div`
+const GeneticaVacaCard = styled.div`
   display: flex;
   align-content: flex-end;
   background-image: url(${(props) => `${import.meta.env.BASE_URL}${props.$imagen}`});;
@@ -113,85 +114,93 @@ const BotonRaza = styled.button`
 
 
 const Genetica = () => {
-    const [vacas, setVacas] = useState([]);
-    const [razaSeleccionada, setRazaSeleccionada] = useState(null);
+  //Variables
+  const [vacas, setVacas] = useState([]);
+  const [razaSeleccionada, setRazaSeleccionada] = useState(null);
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        const fetchVacas = async () => {
-            try {
-                const querySnapshot = await getDocs(collection(db, 'vacas'));
-                const vacasData = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-                setVacas(vacasData);
-                console.log("Vacas obtenids correctamente:", vacasData);
-            } catch (error) {
-                console.error("Error al obtener la colección vacas:", error);
-            }
-        };
-
-        fetchVacas();
-    }, []);
-
-    const handleRazaClick = (raza) => {
-     
-      if (razaSeleccionada === raza) {
-          setRazaSeleccionada(null);
-      } else {
-          setRazaSeleccionada(raza);
+  useEffect(() => {
+    const fetchVacas = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, 'vacas'));
+        const vacasData = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        setVacas(vacasData);
+        console.log("Vacas obtenids correctamente:", vacasData);
+      } catch (error) {
+        console.error("Error al obtener la colección vacas:", error);
       }
+    };
+
+    fetchVacas();
+  }, []);
+
+  //Handlers
+  const handleRazaClick = (raza) => {
+
+    if (razaSeleccionada === raza) {
+      setRazaSeleccionada(null);
+    } else {
+      setRazaSeleccionada(raza);
+    }
   };
 
- const handleMostrarTodas = () => {
-        setRazaSeleccionada(null);
-    };
-  const vacasFiltradas = razaSeleccionada 
-      ? vacas.filter(vaca => vaca.raza === razaSeleccionada) 
-      : vacas;
-    return (<>
-        <GeneticaContainer>
-            <Breadcrumbs $imagen="breadcrumb1.jpeg" textobreadcrumb="Genetica"/>
-            
-            
-            <Tag
-                $bordercolor="black"
-                $fontcolor="black"
-                $backgroundcolor="transparent"
-                subtitulo="Toros padres"
-                
-            />
-            <BotonRaza 
-                onClick={handleMostrarTodas}
-                className={razaSeleccionada === null ? 'active' : ''}
-            >
-                Mostrar Todas
-            </BotonRaza>
-            <BotonRaza 
-              onClick={() => handleRazaClick('Hereford')} 
-              className={razaSeleccionada === 'Hereford' ? 'active' : ''}
-            >
-              Hereford
-            </BotonRaza>
-            <BotonRaza 
-              onClick={() => handleRazaClick('Angus')} 
-              className={razaSeleccionada === 'Angus' ? 'active' : ''}
-            >
-              Angus
-            </BotonRaza>
-            <BotonRaza 
-              onClick={() => handleRazaClick('Braford')} 
-              className={razaSeleccionada === 'Braford' ? 'active' : ''}
-            >
-              Braford
-            </BotonRaza>
-         
-            <GeneticaScrollableWrapper>
-            {vacasFiltradas.map(vaca => (
-       <GeneticaVacaCard key={vaca.id}$imagen={vaca.foto} >
-        <EstanciaOverlay>{vaca.nombreEstancia}<FaChevronRight /></EstanciaOverlay>
-       </GeneticaVacaCard>
-      ))}
-            </GeneticaScrollableWrapper>
-        </GeneticaContainer>
-    </>)
+  const handleMostrarTodas = () => {
+    setRazaSeleccionada(null);
+  };
+  const vacasFiltradas = razaSeleccionada
+    ? vacas.filter(vaca => vaca.raza === razaSeleccionada)
+    : vacas;
+
+  const handleVacaClick = (vaca) => {
+    console.log("Vaca seleccionada:", vaca);
+    navigate(`/vaca/${vaca.id}`, { state: { vaca } });
+  };
+  return (<>
+    <GeneticaContainer>
+      <Breadcrumbs $imagen="breadcrumb1.jpeg" textobreadcrumb="Genetica" />
+
+
+      <Tag
+        $bordercolor="black"
+        $fontcolor="black"
+        $backgroundcolor="transparent"
+        subtitulo="Toros padres"
+
+      />
+      <BotonRaza
+        onClick={handleMostrarTodas}
+        className={razaSeleccionada === null ? 'active' : ''}
+      >
+        Mostrar Todas
+      </BotonRaza>
+      <BotonRaza
+        onClick={() => handleRazaClick('Hereford')}
+        className={razaSeleccionada === 'Hereford' ? 'active' : ''}
+      >
+        Hereford
+      </BotonRaza>
+      <BotonRaza
+        onClick={() => handleRazaClick('Angus')}
+        className={razaSeleccionada === 'Angus' ? 'active' : ''}
+      >
+        Angus
+      </BotonRaza>
+      <BotonRaza
+        onClick={() => handleRazaClick('Braford')}
+        className={razaSeleccionada === 'Braford' ? 'active' : ''}
+      >
+        Braford
+      </BotonRaza>
+
+      <GeneticaScrollableWrapper>
+        {vacasFiltradas.map(vaca => (
+          <GeneticaVacaCard key={vaca.id} $imagen={vaca.foto}  >
+            <EstanciaOverlay onClick={() => handleVacaClick(vaca)}>{vaca.nombreEstancia}<FaChevronRight /></EstanciaOverlay>
+          </GeneticaVacaCard>
+        ))}
+      </GeneticaScrollableWrapper>
+    </GeneticaContainer>
+  </>)
 }
 
 export default Genetica;
