@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Logo,LogoImage,CompanyName } from '../Header/Header';
 import { Subtitulo } from '../Elementos/Titulo';
-import { CenterCol, LeftCol, RightCol } from '../Elementos/Wrappers';
+import { CenterCol, RightCol } from '../Elementos/Wrappers';
 import BottonLargo from '../Elementos/BottonLargo';
 import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
