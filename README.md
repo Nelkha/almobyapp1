@@ -12,6 +12,7 @@ Para el desarrollo del frontend, se utilizaron las siguientes tecnologías:
 - **CSS Grid y Flexbox**: Para lograr un diseño responsivo y adaptativo que se ajusta a diferentes tamaños de pantalla.
 - **React Transition Group**: Para manejar animaciones y transiciones en los componentes de la aplicación.
 - **React Icons**: Para incluir iconos personalizables y atractivos en la interfaz.
+- **Firebase**: Para crear una base de datos y renderizar distintos elementos con las consultas realizadas.
 
 Además, se implementó un pequeño backend utilizando **Firebase** para almacenar datos ficticios. Los datos se cargan a través de un componente llamado `Vacas`, ubicado en la carpeta `utils`.
 
