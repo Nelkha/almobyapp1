@@ -1,7 +1,7 @@
 import { collection, getDocs, setDoc, doc } from "firebase/firestore";
 import { db } from './Firebase';
 
-// Datos de las vacas
+
 const vacas = [
     {
         raza: 'Angus',
